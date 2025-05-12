@@ -1,7 +1,7 @@
 package Clases;
 
 public abstract class algoritmos {
-	/*
+	/**
 	 * Devuelve el numero de fibonacci del numero que le pasan por parametros
 	 * @param num parametro introducido
 	 * @return int
@@ -19,7 +19,7 @@ public abstract class algoritmos {
 			return f1;
 		}	
 	}
-	/*
+	/**
 	 * Calcula el factorial del numero que te pasan por parametros
 	 * @param num parametro introducido
 	 * @return numero entero con el factorial
@@ -33,6 +33,26 @@ public abstract class algoritmos {
 				resultado *= 1;
 			}
 			return resultado;
+		}
+	}
+	/**
+	 * Devuelve true si el numero es primo y false si no lo es
+	 * @param num parametro introducido
+	 * @return true or false
+	 */
+	public boolean primo(int num) {
+		if (num < 2) {
+			throw new IllegalArgumentException();
+		}else {
+			if (num % 2 == 0) {
+				return false;
+			}
+			for (int i = 3; i*i <= num; i++) {
+				if (num % i == 0) {
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }
