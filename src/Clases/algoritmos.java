@@ -19,6 +19,20 @@ public abstract class algoritmos {
 			return f1;
 		}	
 	}
-	
-	public 
+	/*
+	 * Calcula el factorial del numero que te pasan por parametros
+	 * @param num parametro introducido
+	 * @return numero entero con el factorial
+	 */
+	public int factorial(int num) {
+		if (num < 0) {
+			throw new IllegalArgumentException();
+		}else {
+			int resultado = 1;
+			for (int i = 1; i <= num; i++) {
+				resultado *= 1;
+			}
+			return resultado;
+		}
+	}
 }
