@@ -17,18 +17,37 @@ class testAlgoritmos {
 	@Test
 	void testFibonacci() {
 		assertEquals(5, a.fibonacci(5));
-		assertEquals(21, a.fibonacci(8));
+		assertEquals(1, a.fibonacci(2));
 		assertEquals(55, a.fibonacci(10));
 	}
 
 	@Test
 	void testFactorial() {
-		fail("Not yet implemented");
+		assertEquals(120, a.factorial(5));
+		assertEquals(24, a.factorial(4));
+		assertEquals(5040, a.factorial(7));
 	}
 
 	@Test
 	void testPrimo() {
-		fail("Not yet implemented");
+		assertEquals(true, a.primo(2));
+		assertEquals(true, a.primo(11));
+		assertEquals(false, a.primo(9));
+	}
+	
+	@Test
+	void testFibonacciNegativo() {
+		assertThrows(IllegalArgumentException.class,() -> {a.fibonacci(-1);});	
+	}
+	
+	@Test
+	void testPrimosNegativo() {
+		assertThrows(IllegalArgumentException.class,() -> {a.primo(-1);});
+	}
+	
+	@Test
+	void testFactorialNegativo() {
+		assertThrows(IllegalArgumentException.class,() -> {a.factorial(-1);});
 	}
 
 }

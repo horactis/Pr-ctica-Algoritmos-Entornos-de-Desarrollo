@@ -16,7 +16,7 @@ public abstract class algoritmos {
 				f1 = f2;
 				f2 = f3;
 			}
-			return f1;
+			return f2;
 		}	
 	}
 	/**
@@ -30,7 +30,7 @@ public abstract class algoritmos {
 		}else {
 			int resultado = 1;
 			for (int i = 1; i <= num; i++) {
-				resultado *= 1;
+				resultado *= i;
 			}
 			return resultado;
 		}
@@ -41,9 +41,10 @@ public abstract class algoritmos {
 	 * @return true or false
 	 */
 	public boolean primo(int num) {
-		if (num < 2) {
+		if (num <= 0) {
 			throw new IllegalArgumentException();
 		}else {
+			if(num == 2) return true;
 			if (num % 2 == 0) {
 				return false;
 			}
